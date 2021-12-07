@@ -1,7 +1,7 @@
 #---------------------------------------------------
-# Special script to checking UPS control connected to QNAP NAS #via usb plug-in  UPS Cyber POWER device
+# Special script to checking UPS control connected to QNAP NAS via usb plug-in  UPS Cyber POWER device
 #
-# Statement:
+# Manual:
 # add to the crontab this line  */10 * * * * * /etc/init.d/upsT.sh
 # Paste two files and change chmod
 # upsT chmod r-xr-xr-x
@@ -25,7 +25,7 @@ PWD=/root
 usbid=\"\"
 upsim=\"\"
 
-# Current time
+# Current time to check working script
 now=$(date +"%T")
 echo "Current time : $now"
 sleep 3s;
@@ -98,12 +98,3 @@ sudo sh -c "echo '1-2' > /sys/bus/usb/drivers/usb/bind"
 
 #done
 
-
-# need to at the crontab */10 * * * * /etc/init.d/upsT.sh
-# to reset crontab
-#crontab /etc/config/crontab
-#/etc/init.d/crond.sh restart
-# upsT chmod r-xr-xr-x
-# upst1.txt 0777
-#After paste it need to change permission 777
-# Dokonaj blad 127 to brak konwersji linii do UNIX. w edycja  Notpadd++ / konwersjia linii 
